@@ -1,0 +1,40 @@
+Comandos básicos de Git que son de uso continuado
+Creación
+
+    git init <nombre> Crea un nuevo repositorio en el directorio actual
+    git clone <url> Clona un repositorio remoto en el directorio actual
+
+Configuración
+
+    git config --global user.name <nombre> Configura el nombre del usuario
+    git config --global user.email <email> Configura el correo electrónico del usuario
+    git config --global --edit Edición manual del archivo de configuración
+
+Realizando cambios
+
+    git status muestra una lista de los archivos que han cambiado, los que están preparados, confirmados y pendientes
+    git add <archivo> prepara el archivo para el próximo commit
+    git add .|-A|--all prepara todos los archivos nuevos o modificados para el próximo commit
+    git rm <file> elimina archivos del indice y del directorio de trabajo (usar -r para carpetas)
+    git commit creará una instantánea de los cambios y lo guardará en el repositorio de forma asistida.
+    git reset deshace la preparación realizada previamente (git add)
+    git commit -m "mensaje" creará una instantánea de los cambios y lo guardará en el repositorio
+    git commit -am|--amed creará una instantánea de los cambios y los añadirá al commit anterior
+
+Trabajando con Ramas
+
+    git branch lista todas las ramas
+    git branch <rama> crea una nueva rama
+    git branch -d <rama> elimina la rama especificada
+    git checkout <rama> nos movemos a la rama deseada
+    git merge <rama> fusiona la rama actual con la deseada. Nota: si queremos fusionar la rama "b" con "master" primero nos movemos a la rama master y luego fusionamos la rama "b" ej. git checkout master && git merge b
+
+Revisiones y manejo mas avanzado
+
+    git diff para ver las diferencias o conflictos entre ramas o archivos
+    git log Muestra el historio de commits
+    git show muestra información sobre el repositorio
+    git revert revierte los cambios hasta un commit en concreto
+    git tag marca de forma especial un commit como una versión o un hito importante
+
+-- 
